@@ -1,0 +1,258 @@
+
+
+%!TEX root=../protocol.tex	% Optional
+
+\section{Einführung}
+Frau Welsch besitzt ein Seminarhaus in Altafulla, etwas südlich von Barcelona welches 10 Gehminuten vom Strand entfernt liegt. Das Haus kann für Seminare gemietet werden, Frau Welsch leitet aber auch viele Workshops selber, vor allem Yoga-Workshops. Ihre Workshops, bewirbt sie über ihre Website und über sämtlich Reise bzw Seminaranbieter. Falls das Haus nicht von Seminargästen vollständig belegt ist, kann man die Zimmer über Platformen wie ``Booking'' buchen. Für den Betrieb des Hauses stellt Frau Welsch zurzeit einen Koch, eine Sekräterin sowie eine Allroundkraft für Haus und Küche ein. Die Verwaltung Ihrer Angestellten, sämtlicher Workshops sowie der Zimmervermietung erfolgt mittels einem online-Kalender und vielen Excel-Tabellen. Die Verwaltung ist momentan kompliziert und unübersichtlich, weshalb die Autraggeberin gern ein Verwaltungstool hätte, in welchem sie bzw ihre Sekräterin die genannten Punkte verwalten können.
+
+\section{Zielbestimmung}
+Die Verwaltung der Angestellten, sämtlicher Workshops sowie der Zimmervermietung soll der Autraggeberin bzw den zuständigen Mitarbeitern mittels einer Website möglich sein. Für die Mitarbeiter kann man einen Zeitplan erstellen und diesen Ausdrucken. Ebenso werden die Arbeitszeiten eingetragen, damit die Unter- bzw Überstundenanzahl sichtbar ist. Für Workshops müssen sämtliche Workshop und Teilnehmerdaten mittels einer graphischen Benutzeroberfläche sichtbar und veränderbar sein. Es gibt  Zeitpläne ebenfalls für Workshops, welche Ausgedruckt werden können. Für sämtliche Teilnehmer werden Rechnungen, gemäß einer Vorlage erstellt. Je nach Buchungsplatform, über welche die Teilnehmer auf die Workshops aufmerksam geworden sind schauen die Rechnungen unterschiedlich aus
+\subsection*{Nice-to-have}
+Die Auftraggeberin bzw ihre Mitarbeiter können mit mobilen Endgeräten Workshops Teilnehmer und Angestellte verwalten.
+
+\section{Produkteinsatz}
+Der Planer soll auf die Anforderungen des Atha Yoga Seminarhaus zugeschnitten werden. Er wird nur dort verwendet, allerdings kann man in Zukunft den Planer auch für andere Seminarhäusern anpassen. Der Planer ist für die Nutzung von der Auftraggeberin und für die Nutzung von Mitarbeitern ausgelegt.
+
+
+
+\section{Produktfunktionen}
+
+\subsection{Graphische Verwaltungsfunktionen der Angestellten}
+\begin{itemize}[leftmargin=1.0in]
+    \item [\lf] Mitarbeiterdaten ändern\\
+        Sämtliche Mitarbeiterdaten von \ref{mitarb:dat} können hinzugefügt, entfernt oder verändert werden.
+    \item [\lf] Überstundenanzahl anzeigen\\
+        Die Differenz der Vertragsstunden zu den tatsächliche gearbeiteten Stunden kann angezeigt werden. Dabei ist ersichtlich ob es sich um Über oder Minusstunden handelt. Über bzw Minusstunden werden fortlaufend zusammengerechnet.
+    \item [\lf] Mitarbeiter-Übersicht anzeigen\\
+        Es kann eine Übersicht über alle Mitarbeiter angezeigt werden, in welcher auch Überstunden bzw Minusstunden ersichtlich sind. Über bzw Minusstunden werden fortlaufend zusammengerechnet.
+        \makefig{images/mitarbeiter_crud.png}{height=4cm}{
+            Beispiel eines Interfaces für Mitarbeiter  % (Optional)
+        }{
+            fig:mitarbeiter_crud        % (Optional)
+        }
+    \item [\lf] Mitarbeiter-Zeitplan exportieren\\
+        Der Zeitplan soll als PDF für einen angegebenen Zeitraum exportiert werden können. Standardmäßig ist der Zeitraum eine Woche, wobei der Anfangstag ausgewählt werden muss. Als Papiergröße ist A4 vorgesehen. Eine Woche muss auf ein Blatt A4 passen.
+        \makefig{images/workshop_zeitplan.png}{height=5.5cm}{
+            Beispiel eines Mitarbeiter-Zeiplan  % (Optional)
+        }{
+            fig:stpl-angestellt              % (Optional)
+        }
+    \item [\lf] Jahresansicht eines Mitarbeiters\\
+        Für jeden Mitarbeiter gibt es eine Übersicht für jedes Monat mit Soll/Ist-Stundenanzahl, Genommener Urlaub, Überstunden: in diesm Monat und Insgesamt. Eine Jahresübersicht gibt es mit Gesamturlaub und Überstunden.
+        \makefig{images/mitarbeiter_table.png}{height=8cm}{
+            Beispiel einer Jahresübersicht eines Mitarbeiters  % (Optional)
+        }{
+            fig:mitarbeiter_table         % (Optional)
+        }
+\end{itemize}
+    \lfn
+\subsection{Graphische Verwaltungsfunktionen von Workshops}
+
+\begin{itemize}[leftmargin=1.0in]
+    \item [\lf] Neue Workshops anlegen\\
+        Man kann Workshops gemäß \ref{workshop:dat} hinzufügen ändern oder löschen.
+    \item [\lf] Workshopdaten ändern\\
+        Man kann Workshopdaten gemäß \ref{workshop:dat} ändern. Außerdem kann man Teilnehmer hinzufügen, bearbeiten und löschen. 
+    \item [\lf] Teilbetrag bearbeiten\\
+        Man kann einen Teilbetrag der Kosten hinzufügen, ändern oder löschen. Dieser muss von allen Teilnehmern des Workshops bezahlt werden. 
+    \item [\lf] Workshopübersicht anzeigen\\
+        Man kann sich für einen einzelnen Workshop eine Übersicht anzeigen lassen, in welcher alle Workshop-Daten angezeigt werden. Verschachtelte Daten (Teilnehmer bzw Preis des Workshops) werden bei einem click auf das Feld angezeigt.
+    \item [\lf] Workshopjahresübersicht anzeigen\\
+        Man kann sich eine Workshopübersicht grafisch anzeigen lassen. In dieser wird, nach Jahr gruppiert und nach Datum sortiert, der Zeitraum, der Name und der Lehrer des Workshops wird angezeigt. Verfügbare/Leere/Geschlossene Zeiträume werden ebenfalls angezeigt. Außerdem wird bei mehrwöchigen einträgen die Wochenanzahl angezeigt. Dabei wird der Name bzw das Datum der Workshops nach einem auswählbarem Farbschema hinterlegt. Die Gruppierung erfolgt in nach Lehrer: 'Isabella', 'Atha-Yoga Teacher', 'extern' und nach Hotel: 'open', 'closed'
+        \makefig{images/jahresansicht2.png}{height=5cm}{
+            Beispiel der Jahresansicht + Farbschemahinterlegung  % (Optional)
+        }{
+            fig:farbschemalegung         % (Optional)
+        }
+    \item [\lf] Workshop-Zeitplan exportieren\\
+        Der Zeitplan eines Workshops soll als PDF für einen angegebenen Zeitraum exportiert werden können. Standardmäßig ist der Zeitraum eine Woche, wobei der Anfangstag ausgewählt werden muss. Als Papiergröße ist A4 vorgesehen. Eine Woche muss auf ein Blatt A4 passen.
+        \makefig{images/workshop_zeitplan.png}{height=5.5cm}{
+            Beispiel eines Zeitplans von einem Workshop  % (Optional)
+        }{
+            fig:zeiplan_workshop         % (Optional)
+        }
+    \item [\lf] Rechnungsvorlagen importieren\\
+        Man kann Rechnungen entweder im odt (oder docx, je nach Absprache mit Auftraggeberin) Format importieren. Dabei werden variable Stellen (Name, etc.) eindeutig gekennzeichnet so, dass diese beim durchsuchen des Dokuments eindeutig auffindbar sind. 
+    \item [\lf] \label{rechnung:erstellen} Rechnung erstellen\\
+        Die Workshopteilnehmer bekommen eine Rechnung. Diese Rechnungen werden automatisch erstellt, wobei von Vorlagen von Rechnungen automatisch die passende ausgewählt wird. Es gibt für jeden Reiseanbieter unterschiedliche Vorlagen. Die variablen Stellen sind in der Vorlage durch einen in caps-Lock geschriebenen Text erkennbar. Bei diesen wird der jeweilige Wert eingesetzt. In der Vorlage können sämtliche Workshop-Daten als variable Stelle deklariert werden. Man kann Rechnungen gesammelt in einer .zip-Datei herunterladen, in welcher sich die Rechnungen für alle Workshopteilnehmer mit dem Dateinamen in folgender Form: Workshopname\_Nachname\_Vorname\_Reiseanbieter.[Dateiendung der Vorlage] enthalten sind.
+        \makefig{images/zipFile.png}{height=5.5cm}{
+            Beispiel des ZIP-Files  % (Optional)
+        }{
+            fig:zip-file         % (Optional)
+        }
+\end{itemize}
+\lfn
+\subsection{Graphische Verwaltungsfunktionen von Unterkünften}
+\begin{itemize}[leftmargin=1.0in]
+    \item [\lf] Unterkünfte ändern\\
+        Man kann Unterkünfte gemäß \ref{unterkunft:dat} hinzufügen, ändern oder löschen
+    \item [\lf] Zimmereigenschaften ändern\\
+        Man kann \hyperref[unterkunft:zeigenschaft]{Zimmereigenschaften} hinzufügen, ändern und löschen. Beim hinzufügen und ändern kann man auswählen ob es sich um eine ja/nein (hat Klimaanlage ja/nein) Eigenschaft handelt oder ob man freien Text in dieses Feld eingeben will. Die Werte der Zimmereigenschaften können je Zimmer geändert werden.
+    \item [\lf] Unterkunftsübersicht anzeigen\\
+        Man kann eine Übersicht sehen, welche Unterkünfte und deren Daten anzeigt
+\end{itemize}
+\subsection{Statistikfunktionen}
+\begin{itemize}[leftmargin=1.0in]
+    \item [\lf] Teilnehmeranzahl anzeigen\\
+        Man kann sich die Teilnehmeranzahl für einen gewählten Zeitraum anzeigen lassen. Man kann auswählen ob die Teilnehmeranzahl jährlich oder monatlich gruppiert wird.
+         \makefig{images/statistik_teilnehmer.png}{height=5cm}{
+            Beispiel einer Teilnehmeranzalansicht  % (Optional)
+        }{
+            fig:statistik_teilnehmer     % (Optional)
+        }
+    \item [\lf] Umsatz anzeigen\\
+        Man kann sich den Umsatz für einen gewählten Zeitraum anzeigen lassen. Man kann auswählen ob der Umsatz jährlich oder monatlich gruppiert wird.
+         \makefig{images/statistik_umsatz.png}{height=5cm}{
+            Beispiel einer Umsatzübersicht  % (Optional)
+        }{
+            fig:statistik_umsatz   % (Optional)
+        }
+    \item [\lf] Anzahl der Workshops anzeigen\\
+        Man kann sich den Umsatz für einen gewählten Zeitraum anzeigen lassen. Man kann auswählen ob der Umsatz jährlich oder monatlich gruppiert wird. Die Workshops werden nach Lehrer gruppiert, man kann auswählen welche Gruppen angezeigt werden, wobei auch kombinationen möglich sein sollen. 
+        \makefig{images/Statistik_workshops.png}{height=11cm}{
+            Beispiel der Statistikwebsite, wobei die Anzahl der Workshops ausgewählt ist  % (Optional)
+        }{
+            fig:statistik_workshops  % (Optional)
+        }
+\end{itemize}
+\section{Produktdaten}
+
+\subsection{Workshop-Daten}\label{workshop:dat}
+Daten welche zu den je einem Workshop auf dem Server gespeichert werden soll.
+\begin{itemize}[leftmargin=1.0in]
+    \item [\ld] Teilnehmerliste\\
+    Eine Liste an Teilnehmern, zu jedem Teilnehmer werden folgende Daten gespeichert:
+    \begin{itemize}
+        \item Vorname
+        \item Nachname
+        \item Über welchen Anbieter gebucht wurde
+        \item Email-Adresse
+        \item Sprache
+        \item Telefonnummer
+        \item Unterkunftsart
+        \item Allergien
+        \item Anzahl der Personen\\
+            Ein Teilnehmer kann für mehrere Personen buchen, hier muss nur von einem Teilnehmer alles gespeichert werden, sofern die Unterkunftsart gleich ist. 
+        \item Ankunftsdaten:
+        \begin{itemize}
+            \item Ankunftszeit
+            \item Ankunftsterminal
+            \item Abfahrtszeit
+            \item Abfahrtsterminal
+        \end{itemize}
+        \item Rabatt\\
+            Ein Teilnehmer kann einen Rabatt auf den Gesamtpreis bekommen. Dieser wird in \% angegeben und ist standardmäßig bei 0\%.
+        \item Preis des Workshops\\
+            Zu jedem Workshop wird die Aufteilung des Gesamtpreises sowie der Gesamtpreis gespeichert. Ein Teilbetrag schaut aus:
+            \begin{itemize}
+                \item Betrag in Euro
+                \item Verwendung des Betrages
+                \item Wie oft dieser Betrag anfällt
+                \item Summe des Betrages (Betrag $*$ wie oft dieser anfällt) 
+            \end{itemize}
+            Zimmerkosten schauen so aus:
+            \begin{itemize}
+                \item Gewählte Unterkunftsart\\
+                Es gibt wo anderes eine Preistabelle für Unterkunftsarten und deren Preis
+                \item Anzahl der Nächtigungen\\
+                \item Summe des Betrages (Betrag $*$ wie oft dieser anfällt) 
+            \end{itemize}
+        Die Teilbeträge sind für alle Teilnehmer des Workshops gleich, Zimmerkosten variieren von Teilnehmer zu Teilnehmer je nach Unterkunftsart.
+    \end{itemize}
+    \item [\ld] Name des Workshops 
+    \item [\ld] Zeitraum des Workshops\\
+    Ein Zeitraum wann der Workshop beginnt und wann dieser endet.
+    \item [\ld] Zeitplan des Workshops\\
+        Für jeden Workshop gibt es einen Zeitplan in welchem an jedem Tag, zu bestimmten Uhrzeiten, Aktivitäten gespeichert werden können (wie ein Stundenplan)
+    \item [\ld] Lehrer des Workshops\\
+        Jeder Workshop wird von mindestens einem Lehrer geleitet, von diesem wird der Vor- und Nachname gespeichert. Der Lehrer kann ein Mitarbeiter sein, da Workshops aber auch von externen gehalten werden können, muss dies nicht der Fall sein. Lehrer können nach 'Isabella', 'Atha-Yoga Teacher', 'extern' gruppiert werden.
+
+\end{itemize}
+\subsection{Unterkünfte}\label{unterkunft:dat}
+\begin{itemize}[leftmargin=1.0in]
+    \item [\ld] Unterkunftsort\\
+        Wo die Unterkunft ist zB Seminarhaus, Hotel Yola, Privat, ...
+    \item [\ld] Unterkunftsart\\
+        Einzelzimmer, Doppelzimmer, etc.
+    \item [\ld] Geteiltes Bad\\
+        Ob das Zimmer das Bad mit anderen Zimmern teilt oder ein eigenes Bad hat.
+    \item [\ld] Preis pro Nacht\\
+        Der Preis kann sich je nach Saison ändern
+    \item [\ld] \label{unterkunft:zeigenschaft} Zimmereigenschaften\\
+        Welche Eigenschaften das Zimmer hat. Dabei wird einer Eigenschaft ein Wert zugeordnet, Standardmäßig gibt es die Zimmereigenschaft ``Klimaanlage'' welche mit dem Wert ja oder nein angegeben wird. Zimmereigenschaften sind für alle Zimmer gülitg, die Werte der Eigenschaften variieren je nach Zimmer.
+\end{itemize}
+\subsection{Mitarbeiter-Daten}\label{mitarb:dat}
+\begin{itemize}[leftmargin=1.0in]
+    \item [\ld] Mitarbeiterbezeichnung\\
+        Der Vorname bzw Spitzname eines Mitarbeiters wird gespeichert; dieser ist Eindeutig 
+    \item [\ld] Vertragsstunden\\
+        Jeder Mitarbeiter ist mit einem Vertrag angestellt. In diesem sind offizielle Vertragsstunden angegeben, welche am Server abgespeichert werden. Die Stundenanzahl kann sich ändern, allerdings darf die neue Stundenanzahl erst ab dem neuen Zeitpunkt gelten, die Vertragsstunden die bis zur änderung gültig waren dürfen nicht gelöscht werden.
+    \item [\ld] Arbeitszeit\\
+        Mitarbeiter verrichten arbeit - dies muss zur Überstundenabrechnung gespeichert werden können.
+    \item [\ld] Zeitplan\\
+        Jeder Mitarbeiter hat einen Zeitplan, laut welcher er arbeiten soll.
+\end{itemize}
+
+
+
+\section{Zwingende Randbedingungen}
+    \subsection{Produktumgebung und Systemintegration}
+        Das Projekt soll mittels einer NoSQL Datenbank, Anuglar, Spring und Java oder Kotlin umgesetzt werden. Zusatzbibliotheken dürfen verwendet werden, sofern diese nicht kostenpflichtig sind (zB Bootstrap,  MongoDB JDBC Treiber für Java, usw. dürfen verwendet werden). Dabei muss die neueste Version verwendet werden (zB bei Bootstrap muss mindestens Version 4.3.1 verwendet werden; Stand 3.9.2019) . Der Planer muss alle gesetzlichen Richtlinien einhalten, welche auf diesen zutreffen. Der Server befindet sich in Deutschland, das Seminarhaus und somit auch der Firmensitz in Spanien. Derzeit existiert ein Webserver, welcher mit Linux zugänglich ist und eine Domain. Sämtliche Docker Images können auf dem Server erstellt werden, die für die Lauffähigkeit der Applikation notwendig sind. Momentan ist auf dem Server ein Kalender gespeichert, welcher die Zimmerzuteilungen speichert. Die App muss nicht von dem Projektteam auf dem Server zum laufen gebraucht werden. Der Planer soll mit folgenden Webbrowsern bedient werden können:
+        \begin{itemize}
+            \item Firefox 65+
+            \item Chrome 73+
+            \item Safari 12+
+        \end{itemize}
+        Standardmäßig kommt man auf eine Einloggen Seite, auf welcher man Benutzername und Passwort angeben muss. Dabei kann man ein Häkchen auf ``Remember me'' setzen, um nicht nochmals auf diese Seite zu gelangen. Ein Menü ist immer sichtbar, über welches man alle Funktionen aufrufen kann. Außerdem gibt es eine Übersichtsseite, über welche man alle Funktionen aufrufen kann.
+    \subsection{Schnittstellen}
+        Der Planer braucht eine Webschnittstelle damit der Browser des Clients ordnungsgemäß mit dem Planer kommunizieren kann.
+
+
+
+\section{Vertragsgegenstand}
+    \subsection{Lieferumfang}
+        Der Planer wird mit Projektende inklusive aller Funktionen an die Auftraggeberin und Moritz Welsch, in der Form eines Git-Repositorys überreicht. Dieses beinhaltet ebenfalls  ein Docker Image oder eine Docker-Compose-Konfigurationsdatei, welche ``Plug\&Play'' ist. Das heißt, dass man diese nur auf einem Linux-Server ausführen muss und der Planer mittels IP-Adresse auf Port 8080 von einem Webbrowser aus bedient werden kann, ohne dass weitere konfigurationen durchgeführt werden müssen. Außerdem wird eine Liste mitgeliefert, in welcher alle verfügbaren Variablen aufgelistet sind, welche man in einer Rechnungsvorlage einsetzen kann (siehe \ref{rechnung:erstellen}).
+    \subsection{Produktleistungen}
+    \begin{itemize}[leftmargin=1.0in]
+        % GUI-Funktionen
+        \item [\ll] Schutz vor Attacken \\
+            Jegliche Seiten die ohne Autohentifizierung erreichbar sind müssen gegen sämtliche öffentlich Bekannte Hacking-Attacken (inkl Injection, XSS, usw. excl DDOS), welche zum Zeitpunkt des Projektendes bestehen geschützt sein.
+        \item [\ll] Schutz vor fehlerhaften Eingaben \\
+            Wenn der Benutzer irgendwo einen ungültigen Wert einträgt muss das System weiterlaufen
+        \item [\ll] Client zu Server Übertragung \\
+            Die Übertragung der Website soll, lokal weniger als zwei Sekunden dauern.
+        \item [\ll] Notifikation bei Verbindungsabbruch \\
+            Falls auf der Seite live Werte geändert werden können, muss der Benutzer bei einem Verbindungsabbruch informiert werden. Beim abbruch soll der Benutzer dennoch in der Lage sein lokale Änderungen zu sehen und mit externen Tools wie dem Snipping-Tool diese Abzuspeichern
+        \item [\ll] Zugriffsschutz \\
+            Die Website ist vor unauthorisiertem Zugriff geschützt.
+        \item [\ll] Verschlüsselung der Übertragung \\
+            Die Website kann nur über eine verschlüsselte Verbindung aufgerufen werden
+    \end{itemize}
+    \subsection{Produktbezogene Leistungen}
+    Die Anleitung zur änderung/erweiterung der Datenbank und somit auch des Webinterfaces werden dem Produkt beigelegt.
+
+
+\section{Qualitätsanforderungen}
+    Es wird ein sehr hoher Wert auf die Funktionalität und Zuverlässigkeit des Planers, da dieser für geschäftszwecke eingesetzt wird. Wenn dieser bzw dessen funktionalität ausfällt könnten geschäftliche Verluste entstehen.  Auch wird der Übertragbarkeit besondere Aufmerksamkeit geschenkt, da der Planer auf jedem Linux-Server funktionieren sollte, welcher Docker bzw Docker Compose unterstützt. Die Punkte Benutzerbarkeit ist sehr wichtig, da die Auftraggeberin und potenzielle andere Nutzer des Planers keine IT Experten sind. Sie sollten das ganze System ohne externe Hilfe verstehen und dieses auch ohne Probleme bedienen können. Ob und wie weit sich die Spalten ändern werden ist noch nicht absehbar. Für einige Zeit sollte das System ohne Änderungen auskommen, allerdings kann durch geschäftliche oder gesetzliche Anpassungen sich die Logik des Planers leicht verändern. Die Effizienz wird als normal angesehen, da alle Prozesse zeitlich schnell ablaufen sollten, aber keine Prozesse als kritisch eingestuft werden. Außerdem verfügt der Server über Ressourcen, welche von einer Webanwendung ohne Fehler nur schwer aus auszulasten sind.
+    
+    \begin{center}
+    
+    \begin{tabular}{|c|c|c|c|c|}
+    
+    \hline
+        \rowcolor{gray} \textbf{\color{white}Produktqualität}&\textbf{\color{white}Sehr gut}&\textbf{\color{white}Gut}&\textbf{\color{white}Normal}&\textbf{\color{white}Irrelevant} \\
+         \hline 
+         Funktionalität&x&&&\\
+         \hline
+         Zuverlässigkeit&x&&&\\
+         \hline
+         Benutzbarkeit&x&&&\\
+         \hline
+         Effizienz&&&x&\\
+         \hline
+         Änderbarkeit&&x&&\\
+         \hline
+         Übertragbarkeit&&x&&\\
+    \hline
+    \end{tabular}
+    \end{center}

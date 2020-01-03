@@ -1,0 +1,89 @@
+\documentclass[minted, notitle]{protocol}
+% Packages
+\usepackage{verbatim}
+%\documentclass[xcolor=dvipsnames]{beamer} 
+\usepackage{pgfmath}
+\usepackage{sectsty}
+
+% Required
+\title{Seminarplaner}
+\author{Welsch Moritz}
+\myversion{1.0}
+\geometry{a4paper, bmargin=1.5in}
+
+% Kacpers total wichtige Design-Prinzipien
+\tocfalse
+\definecolor{celadon}{rgb}{0.67, 0.88, 0.69}
+\definecolor{lightgrey}{rgb}{0.88 0.88 0.88}
+\definecolor{rlightgreen}{RGB}{221, 246, 202}
+%\rowcolors{2}{celadon}{green!70!yellow!40}
+\rowcolors{2}{lightgrey}{white}
+\newcommand{\draft}{\cellcolor{Peach} Draft}
+\newcommand{\abgabe}{\cellcolor{LimeGreen}Approved } 
+\newcommand{\version}{0.3}
+
+\usepackage[sfdefault]{roboto} % The font, that beats them all...
+% Farbensetzen für Sections
+% -- DEPRECATED -- I miss you green Hulk :/
+%\sectionfont{\color{LimeGreen}}  % Green Hulk > Red Hulk
+%\subsectionfont{\color{OliveGreen}}
+\sectionfont{\color{darkgray}}
+\subsectionfont{\color{gray}}
+
+
+% Titlepage
+\begin{document}
+\begin{titlepage} % Fancy title page
+	\raggedleft % Right align the title page
+	
+	\begingroup \color{gray}{\rule{3pt}{\textheight}} \endgroup % Vertical line
+	%\begingroup \color{OliveGreen}{\rule{3pt}{\textheight}} \endgroup % Vertical line
+	\hspace{0.05\textwidth} % Whitespace between the vertical line and title page text
+	\parbox[b]{0.75\textwidth}{ % Paragraph box for holding the title page text, adjust the width to move the title page left or right on the page
+		{{\fontsize{27}{48} \selectfont  LASTENHEFT}} \\	\vspace{0.284\textheight} \\
+		
+		{\includegraphics[width=220]{images/Logo_1.png}} \\[2\baselineskip]
+		%{{\fontsize{65}{48} \bfseries \color{LimeGreen} LBVT}} \\[0.5\baselineskip] %\LaTeX ~Templates}\\[2\baselineskip] % Title
+		{{\fontsize{20}{48} \selectfont Seminarplaner}} \\ %[0.5\baselineskip] % Subtitle or further description
+		%{\Large Lernbüroverwaltungstool}\\ [2\baselineskip] % Subtitle or further description
+		{\vspace{-0.5cm}\large \begin{flushleft} Welsch Moritz\end{flushleft}}\\ [1\baselineskip] % Author name, lower case for consistent small caps
+		
+		%\vspace{0.5\textheight} % Whitespace between the title block and the publisher
+		{\vspace{0.3cm}\includegraphics[width=220]{images/tgm_full.png}}
+		%{\noindent The Publisher~~\plogo}\\[\baselineskip] % Publisher and logo
+	}
+\end{titlepage}
+
+
+% Versionierung
+\begin{center}
+\rowcolors{2}{white}{white}
+\begin{tabular}{| c | p{1.8cm} | p{1.8cm} | c | c | p{3.4cm} |}
+\hline \rowcolor{gray} \textbf{\color{white}Version} & \textbf{\color{white}Autor} & \textbf{\color{white}QS} & \textbf{\color{white}Datum} & \textbf{\color{white}Status} & \textbf{\color{white}Kommentare} \\ 
+ \hline \hline
+ 0.1 & Moritz Welsch && 27.03.2019 & \draft & Vorbereitung der Vorlage\\
+ \hline
+ 0.2 & Moritz Welsch && 28.03.2019 & \draft & Arbeiten an Produktfunktionen und Produktdaten\\
+ \hline
+ 0.3 & Moritz Welsch &Stefan Zakall& 11.04.2019 & \draft & Überarbeitung der Einleitung, Layout, anpassungen bei Produkteinsatz, funktionen und daten \\
+ \hline  
+ 1.0 & Moritz Welsch && 13.05.2019 & \abgabe & Überarbeitung Produktfunktionen und hinzufügen von Mockups\\
+ \hline
+\end{tabular}
+\end{center}
+
+% Inhaltsverzeichnis
+\clearpage
+{ % Wir wollen ja kein blaues Inhaltsverzeichnis :), im blue da ba dee da ba bei
+  \hypersetup{linkcolor=black}
+  \tableofcontents
+} 
+
+% Inhalt inkludieren
+\clearpage
+%\include{_task} 	% Information about the purpose of this project
+%\include{_solution} % Solution for the given tasks and their documentation
+%\glsaddall 		% Add all glossary entries to printglossaries
+%\nocite{*}
+\include{_lastenheft}
+\end{document}
